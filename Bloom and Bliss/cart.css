@@ -1,0 +1,343 @@
+:root {
+  --rose: #a85f58;
+  --brand-pink: #c96f8e;
+  --cream: #fdf6f3;
+  --ink: #3b2a2a;
+  --line: #ecd9d4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  color: var(--ink);
+  background: #fff;
+}
+
+/* Same header layout as the Bloom and Bliss homepage */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  min-height: 88px;
+  background: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 105px;
+  height: 82px;
+  object-fit: contain;
+}
+
+.logo {
+  font-family: "Lobster", "Dancing Script", cursive;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--brand-pink);
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  margin-right: 5%;
+}
+
+nav a {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #111;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--brand-pink);
+}
+
+/* Cart page hero: same homepage rose, without the homepage flower photo */
+.hero {
+  display: flex;
+  align-items: center;
+  margin: 6px 5% 0;
+  min-height: 220px;
+  padding: 40px;
+  border-radius: 14px;
+  background: var(--rose);
+  color: #fff;
+}
+
+.hero-text {
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 2.2rem;
+  line-height: 1.5;
+}
+
+.hero p {
+  margin-top: 14px;
+  font-size: 1rem;
+}
+
+/* Main content */
+.wrap {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 25px;
+  margin: 30px 5% 40px;
+}
+
+.card {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: var(--rose);
+  font-size: 1.3rem;
+}
+
+/* Cart items */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--cream);
+  font-size: 25px;
+}
+
+.info {
+  flex: 1;
+}
+
+.info small {
+  color: #7a6460;
+}
+
+.qty button {
+  padding: 5px 10px;
+  border: 1px solid var(--rose);
+  background: #fff;
+  color: var(--rose);
+  cursor: pointer;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.remove {
+  border: 0;
+  background: none;
+  color: #b33;
+  cursor: pointer;
+}
+
+/* Delivery form */
+label {
+  display: block;
+  margin: 12px 0 5px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font: inherit;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Order summary */
+.sum div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.sum .total {
+  padding-top: 12px;
+  border-top: 2px solid var(--line);
+  color: var(--rose);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--rose);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #8f4a46;
+}
+
+/* Empty cart and confirmation */
+.empty {
+  padding: 20px;
+  text-align: center;
+}
+
+.confirm {
+  display: none;
+  margin: 40px 5%;
+  padding: 40px;
+  border-radius: 10px;
+  background: var(--cream);
+  text-align: center;
+}
+
+.confirm h2 {
+  margin: 10px;
+  color: var(--rose);
+}
+
+footer {
+  padding: 20px;
+  color: #7a6460;
+  text-align: center;
+}
+
+/* Mobile layout */
+@media (max-width: 800px) {
+  header {
+    justify-content: center;
+    padding: 8px 3%;
+  }
+
+  .brand img {
+    width: 70px;
+    height: 58px;
+  }
+
+  .logo {
+    font-size: 1.9rem;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 8px 0;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: 170px;
+    margin: 6px 3% 0;
+    padding: 25px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .wrap {
+    grid-template-columns: 1fr;
+    margin: 20px 3% 30px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Cart page introduction - replaces the homepage logo and navigation */
+.intro {
+  margin: 18px 5% 0;
+  padding: 30px 36px;
+  background: var(--rose);
+  color: #fff;
+  border-radius: 14px;
+}
+
+.intro h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.intro-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.intro-points span {
+  padding: 7px 12px;
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .intro {
+    margin: 12px 3% 0;
+    padding: 24px 20px;
+  }
+
+  .intro h1 {
+    font-size: 1.6rem;
+  }
+}
